@@ -48,8 +48,8 @@ Start again PowerShell as an Administrator and run
 
 TBD:
 
-https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/
-https://superuser.com/questions/37512/how-to-read-ext4-partitions-on-windows
+* https://pureinfotech.com/install-windows-subsystem-linux-2-windows-10/
+* https://superuser.com/questions/37512/how-to-read-ext4-partitions-on-windows
 
 ```
 PS C:\WINDOWS\system32> wmic diskdrive list brief
