@@ -81,5 +81,9 @@ In addition you may need to run `gpedit.msc`
 
 An in the policy “Limit number of connections” under Computer Configuration -> Administrative Templates -> Windows Components -> Remote Desktop Services -> Remote Desktop Session Host -> Connections section. Change its value to 999999.
 
-
+# Can’t pin folders to Quick Access (The parameter is incorrect.) ASUS
+```
+del /F /Q %APPDATA%\Microsoft\Windows\Recent\AutomaticDestinations
+```
+https://www.jdhodges.com/blog/solved-cant-pin-folders-quick-access-parameter-incorrect/
 
