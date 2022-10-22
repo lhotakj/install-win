@@ -22,11 +22,22 @@ sc delete icssvc
 sc delete DiagTrack
 ```
 
-## Remove gaming services
+## Remove gaming services - **only** in case you don't want to play!
 ```powershell
 Get-Appxpackage Microsoft.GamingServices | remove-AppxPackage -allusers
 Get-AppxPackage Microsoft.XboxGamingOverlay | remove-AppxPackage -allusers
 Get-AppxPackage Microsoft.GamingApp | remove-AppxPackage -allusers
+Get-AppxPackage Microsoft.XboxGameCallableUI | remove-AppxPackage -allusers
+Get-AppxPackage Microsoft.Xbox.TCUI | remove-AppxPackage -allusers
+Get-AppxPackage Microsoft.XboxSpeechToTextOverlay | remove-AppxPackage -allusers
+Get-AppxPackage Microsoft.XboxGameOverlay | remove-AppxPackage -allusers
+Get-AppxPackage Microsoft.XboxIdentityProvider | remove-AppxPackage -allusers
+Get-AppxPackage Microsoft.XboxApp | remove-AppxPackage -allusers
+```
+FYI list:
+```powershell
+Get-AppxPackage –AllUsers | Select Name | select-string "Xbo"
+Get-AppxPackage –AllUsers | Select Name | select-string "gam"
 ```
 
 ## Regedit: remove unwanted start apps
