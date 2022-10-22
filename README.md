@@ -8,18 +8,25 @@ sc delete "ccleaner"
 sc delete "ccleanerm"
 ```
 
+# source https://www.groovypost.com/howto/12-windows-10-services-that-are-safe-to-disable/
 Windows Image Acquisition (WIA)
 Fax
 TabletInputService
+Windows Mobile Hotspot Service
+Connected User Experiences and Telemetry
 ```bat
 sc delete stisvc
 sc delete fax
 sc delete TabletInputService
+sc delete icssvc
+sc delete DiagTrack
 ```
 
 ## Remove gaming services
 ```powershell
-get-appxpackage Microsoft.GamingServices | remove-AppxPackage -allusers
+Get-Appxpackage Microsoft.GamingServices | remove-AppxPackage -allusers
+Get-AppxPackage Microsoft.XboxGamingOverlay | remove-AppxPackage -allusers
+Get-AppxPackage Microsoft.GamingApp | remove-AppxPackage -allusers
 ```
 
 ## Regedit: remove unwanted start apps
