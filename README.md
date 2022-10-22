@@ -6,6 +6,7 @@ run elevated `cmd`
 sc delete "CCleanerBrowserElevationService"
 sc delete "ccleaner"
 sc delete "ccleanerm"
+sc delete "CCleanerPerformanceOptimizerService"
 ```
 
 # source https://www.groovypost.com/howto/12-windows-10-services-that-are-safe-to-disable/
