@@ -2,7 +2,7 @@
 
 ## Clenup of uncessary services
 run elevated `cmd`
-```
+```bat
 sc delete "CCleanerBrowserElevationService"
 sc delete "ccleaner"
 sc delete "ccleanerm"
@@ -11,10 +11,15 @@ sc delete "ccleanerm"
 Windows Image Acquisition (WIA)
 Fax
 TabletInputService
-``` 
+```bat
 sc delete stisvc
 sc delete fax
 sc delete TabletInputService
+```
+
+## Remove gaming services
+```powershell
+get-appxpackage Microsoft.GamingServices | remove-AppxPackage -allusers
 ```
 
 ## Regedit: remove unwanted start apps
@@ -32,7 +37,9 @@ Run elevated PowerShell
 
 Change the PowerShell execution policy settings for the current session:
 
-`Set-ExecutionPolicy Bypass -Scope Process -Force`
+```powershell
+Set-ExecutionPolicy Bypass -Scope Process -Force
+```
 
 and then execute
 
