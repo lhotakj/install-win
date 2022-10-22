@@ -9,7 +9,7 @@ sc delete "ccleanerm"
 sc delete "CCleanerPerformanceOptimizerService"
 ```
 
-# source https://www.groovypost.com/howto/12-windows-10-services-that-are-safe-to-disable/
+source _https://www.groovypost.com/howto/12-windows-10-services-that-are-safe-to-disable/_
 Windows Image Acquisition (WIA)
 Fax
 TabletInputService
@@ -40,6 +40,12 @@ FYI list:
 Get-AppxPackage –AllUsers | Select Name | select-string "Xbo"
 Get-AppxPackage –AllUsers | Select Name | select-string "gam"
 ```
+## Remove Skype and Todos
+```powershell
+Get-AppxPackage Microsoft.SkypeApp | remove-AppxPackage -allusers
+Get-AppxPackage Microsoft.Todos | remove-AppxPackage -allusers
+```
+
 
 ## Regedit: remove unwanted start apps
 Current user
